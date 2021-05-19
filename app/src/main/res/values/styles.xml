@@ -1,0 +1,67 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LoadingDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AudioFileInfoOverlayText">
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+        <!-- 更换Toolbar OVerFlow menu icon -->
+        <item name="actionOverflowButtonStyle">@style/OverFlowIcon</item>
+        <!-- 设置 toolbar 溢出菜单的文字的颜色 -->
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <!-- 设置 显示在toobar上菜单文字的颜色 -->
+        <item name="actionMenuTextColor">@android:color/black</item>
+        <!-- 设置toolbar 弹出菜单的字体大小和溢出菜单文字大小-->
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="OverFlowIcon" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/abc_ic_menu_moreoverflow_mtrl_alpha</item>
+    </style>
+
+    <!-- This configures the styles for the title within the Toolbar  -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+
+<!--    style para mulktselc-->
+
+<!--    <style name="RippleStyleWhite">-->
+<!--        <item name="mrl_rippleOverlay">true</item>-->
+<!--        <item name="mrl_rippleColor">#80FFFFFF</item>-->
+<!--        <item name="mrl_rippleHover">true</item>-->
+<!--        <item name="mrl_rippleAlpha">0.2</item>-->
+<!--    </style>-->
+<!--    <style name="RippleStyleBlack" parent="RippleStyleWhite">-->
+<!--        <item name="mrl_rippleColor">#8096989A</item>-->
+<!--    </style>-->
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

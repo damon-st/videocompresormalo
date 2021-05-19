@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".fragments.VideoList">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:text="@string/ver_images_video_comprimido"
+        android:textColor="@color/white"
+        android:id="@+id/list_videos_btn"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/list_videos_btn"
+        android:id="@+id/recyclerView_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <color name="colorBlack">#101010</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#353535</color>
+
+
+    <color name="colorItemlist">#047EBB</color>
+    <color name="colorFragmentBg">#022B68</color>
+
+    <color name="waveform_selected">#33b5e5</color>
+    <color name="waveform_unselected">#195a72</color>
+    <color name="waveform_unselected_bkgnd_overlay">#0a242d</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#ffff66</color>
+    <color name="grid_line">#66ffffff</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+
+    <color name="f4d4d4d">#4d4d4d</color>
+    <color name="ff666666">#666666</color>
+    <color name="cccccc">#cccccc</color>
+    <color name="ff7f000000">#7f000000</color>
+
+    <color name="colorDarkBlue">#272C4F</color>
+    <color name="colorDarkBlue2">#42456f</color>
+    <color name="colorDarkBlue3">#565A7B</color>
+
+    <color name="seekbar_border">#00befa</color>
+    <color name="seekbar_mask">#66000000</color>
+</resources>

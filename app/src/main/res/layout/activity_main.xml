@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activitys.MainActivity">
+
+    <Button
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:id="@+id/buscar"/>
+
+    <Button
+        android:visibility="gone"
+        android:layout_below="@+id/buscar"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar video"
+        android:id="@+id/buscarvideo"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBartLayout">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_tabs"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:tabTextColor="@android:color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_tabs_pager"
+        android:layout_below="@+id/appBartLayout"
+        android:layout_above="@+id/adView"
+        >
+    </androidx.viewpager.widget.ViewPager>
+
+
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/adView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="@string/banner">-->
+<!--    </com.google.android.gms.ads.AdView>-->
+
+
+</RelativeLayout>

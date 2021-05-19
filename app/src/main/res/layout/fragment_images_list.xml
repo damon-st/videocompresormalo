@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".fragments.ImagesListFragment">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/grey"-->
+<!--        android:theme="@style/ToolbarTheme"-->
+<!--        app:contentInsetStartWithNavigation="0dp"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        app:titleTextAppearance="@style/Toolbar.TitleText"-->
+<!--        android:visibility="visible"-->
+<!--        >-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_arrow_back_black_24dp"-->
+<!--            android:id="@+id/tolbar_dos"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/toolbar_title"-->
+<!--            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="14sp"-->
+<!--            android:text="TotalSeleccionado"-->
+<!--            android:textColor="@color/white"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/toolbar_menu_title"-->
+<!--            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:paddingRight="15dp"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="COMPRIMIR"-->
+<!--            android:textColor="@color/white"-->
+<!--            />-->
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbars"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/grey"
+            app:contentInsetStartWithNavigation="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/toolbars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/reflesh">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerImages"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

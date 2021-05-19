@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TITULO"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                android:id="@+id/titulo_dialog"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:id="@+id/video_dialog"
+                    app:resize_mode="fill"
+                    android:backgroundTint="@color/colorPrimary"
+
+                    />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_expan"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/expan_video"
+                    />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/close_vide"
+                    />
+
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/progress_video"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/frame_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/grey"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linear_shared"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_share_white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shared_btn"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linear_delete"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/player_header_icon"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ver_audio_extraido"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linear_compress"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_compress"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comprimir_video"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

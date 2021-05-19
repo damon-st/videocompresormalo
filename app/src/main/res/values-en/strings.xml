@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VideoCompress</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="string_edit_audio">Edit Audio</string>
+    <string name="start_marker">Home marker</string>
+    <string name="end_marker">End Score</string>
+    <string name="alert_title_success">Success</string>
+    <string name="alert_title_failure">Failure</string>
+    <string name="alert_ok_button">Confirm</string>
+    <string name="bad_extension_error">Written files are not yet supported.</string>
+    <string name="no_extension_error">Files without extensions (como .mp3, .wav) they are not yet compatible</string>
+    <string name="read_error">error reading</string>
+    <string name="string_cut_audio">Edit audio</string>
+    <string name="play">Play</string>
+    <string name="string_save">Save</string>
+    <string name="string_saveasring">Save in ring</string>
+    <string name="string_reset">Reset</string>
+
+    <string name="progress_dialog_loading">Loading…</string>
+    <string name="progress_dialog_recording">Recording…</string>
+    <string name="progress_dialog_saving">Watching…</string>
+    <string name="progress_dialog_cancel">Cancel</string>
+    <string name="progress_dialog_stop">Stop</string>
+    <string name="record_error">Error recording audio</string>
+
+    <string name="ringtone_type_label">Type：</string>
+    <string name="ringtone_name_label">Number：</string>
+    <string name="file_save_title">save in：</string>
+    <string name="file_save_button_save">save</string>
+    <string name="file_save_button_cancel">cancel</string>
+    <string name="type_music">music</string>
+    <string name="type_alarm">alarm</string>
+    <string name="type_notification">Notification</string>
+    <string name="type_ringtone">Ringtone</string>
+    <string name="type_compres_music">CompressMusic</string>
+    <string name="artist_name">Ringdroid</string>
+
+    <string name="in_process">Processing...</string>
+
+
+    <string name="save_success_message">Saved！</string>
+    <string name="set_default_notification">¡Saved! ¿You want it to be the default notification?？</string>
+    <string name="alert_yes_button">Yes，please！</string>
+    <string name="alert_no_button">not，thanks。</string>
+    <string name="default_ringtone_success_message">Changed default ringtone</string>
+
+    <string name="what_to_do_with_ringtone">¡Saved! ¿You want to set it as the default ringtone or assign it to a contact?？</string>
+
+
+    <string name="no_unique_filename">Cannot find a unique file name</string>
+    <string name="no_space_error">Your SD card is full and there is not enough space to save this file.</string>
+    <string name="write_error">mistake writing</string>
+    <string name="too_small_error">You cant save a file too small, try to lengthen it.</string>
+    <string name="make_default_ringtone_button">set default</string>
+    <string name="choose_contact_ringtone_button">Assign to contact</string>
+    <string name="do_nothing_with_ringtone_button">close</string>
+    <string name="stop">stop</string>
+
+
+    <string name="play_error">This media file cannot be played.</string>
+
+    <string name="start_label">Home：</string>
+    <string name="end_label">final:</string>
+    <string name="edit_intent">Edit</string>
+    <string name="time_seconds">s</string>
+
+    <string-array name="planets_array">
+        <item>Low Compression</item>
+        <item>Medium Compression</item>
+        <item>High Compression</item>
+    </string-array>
+
+
+    <string name="shared_btn">SHARED \nVIDEO</string>
+    <string name="ver_audio_extraido">WATCH AUDIOS \n Extracted</string>
+    <string name="comprimir_video">Compress \nVIDEO</string>
+    <string name="custom_image_dialog">Manually set image quality\n example:</string>
+    <string name="ancho_imagen">IMAGE WIDTH: </string>
+    <string name="alto_imagen">IMAGE HEIGHT: </string>
+    <string name="calidad_de_imagen">IMAGE QUALITY: </string>
+    <string name="confirmar">CONFIRM</string>
+    <string name="video">VIDEOS</string>
+    <string name="images">IMAGES</string>
+    <string name="ver_images_video_comprimido">SEE VIDEOS AND COMPRESSED IMAGES</string>
+    <string name="ruta_original">Original Route: </string>
+    <string name="ruta_destino">Destination Folder: </string>
+    <string name="buscar_otro_video">FIND ANOTHER VIDEO</string>
+    <string name="extraer_audio">EXTRACT AUDIO</string>
+    <string name="cortar_video">CUT VIDEO</string>
+    <string name="videos_comprimidos">Compressed Video</string>
+    <string name="images_comrpimidos">Compressed Images</string>
+    <string name="shared_multi">SHARE COMPRESSED IMAGES</string>
+    <string name="comprimir_imagen">COMPRESSED IMAGES</string>
+    <string name="cortar">CUT</string>
+
+
+        <string name="banner">ca-app-pub-3940256099942544/6300978111</string>
+<!--    <string name="banner">ca-app-pub-1691614301371531/8483487579</string>-->
+
+        <string name="bonificado">ca-app-pub-3940256099942544/5224354917</string>
+<!--    <string name="bonificado">ca-app-pub-1691614301371531/8707968414</string>-->
+
+
+        <string name="interstal">ca-app-pub-3940256099942544/1033173712</string>
+<!--    <string name="interstal">ca-app-pub-1691614301371531/7366966588</string>-->
+
+
+    <string name="app_id_admob">ca-app-pub-1691614301371531~4712597673</string>
+</resources>

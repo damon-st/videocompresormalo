@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/player_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="70dp"
+    android:id="@+id/player_sheet"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/media_header_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            app:srcCompat="@drawable/player_header_icon"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/player_header_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:text="Media Player"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/player_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="end"
+            android:paddingTop="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="24dp"
+            android:text="Detenido"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingRight="24dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/player_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Nombre del  archivo"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:gravity="center_horizontal" />
+
+    <ImageButton
+        android:id="@+id/player_play_btn"
+        android:background="@color/grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_file_name"
+        app:srcCompat="@drawable/player_play_btn"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/btn_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@color/grey"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/player_play_btn"
+        app:layout_constraintEnd_toStartOf="@+id/player_play_btn"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_file_name"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/player_back_btn"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/grey"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/player_play_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toEndOf="@+id/player_play_btn"
+        app:layout_constraintTop_toTopOf="@+id/player_play_btn"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/player_forward_btn"
+        tools:ignore="VectorDrawableCompat" />
+
+    <SeekBar
+        android:id="@+id/player_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_play_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

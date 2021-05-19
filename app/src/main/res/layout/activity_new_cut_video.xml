@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:rsb="http://schemas.android.com/tools"
+    xmlns:seek="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/grey"
+        android:theme="@style/ToolbarTheme"
+        app:contentInsetStartWithNavigation="0dp"
+
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+
+        <ImageView
+            android:id="@+id/tolbar_dos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_white" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/cortar_video"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/toolbar_menu_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="15dp"
+            android:text="@string/cortar"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/videoeditor"
+            android:layout_alignParentTop="true"
+            >
+
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.damon.videocompress.view.cutvideo.VideoEditor
+            android:layout_above="@+id/lienar_dos"
+            android:id="@+id/videoeditor"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            seek:leftThumb="@drawable/selector_seekbar_left"
+            seek:rightThumb="@drawable/selector_seekbar_right"
+            seek:thumbWidth="21dp"
+            seek:minTrimMs="3000"
+            seek:borderColor="@color/white"/>
+
+
+        <LinearLayout
+            android:id="@+id/lienar_dos"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progrss_cut"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_below="@+id/layout_surface_view"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tvRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:id="@+id/ll_trim_tab"
+                        android:layout_width="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:text="Recorte"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"/>
+
+                        <View
+                            android:id="@+id/view_trim_indicator"
+                            android:layout_width="70dp"
+                            android:layout_height="5dp"
+                            android:background="@android:color/white"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/video_shoot_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:paddingRight="5dp"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Tiempo 10 s"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        rsb:ignore="RtlCompat" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/btn_play_cut"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/player_play_btn"
+                        android:layout_gravity="center_vertical"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

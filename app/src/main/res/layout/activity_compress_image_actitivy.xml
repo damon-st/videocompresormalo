@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.CompressImageActitivy">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbartlayout"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+           />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/appbartlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+     <LinearLayout
+         android:layout_margin="5dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/btn_buscar"
+             android:background="@drawable/bg_btn"
+             android:textColor="@color/white"
+             android:text="BUSCAR IMAGEN"
+             android:textSize="18sp"
+             android:layout_weight="1"
+             />
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/bg_btn"
+             android:textColor="@color/white"
+             android:text="COMPRIMIR IMAGEN"
+             android:textSize="18sp"
+             android:id="@+id/btn_comprimir"
+             android:layout_weight="1"
+             android:layout_marginLeft="5dp"
+             />
+
+     </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto_uno"
+        android:text="IMAGEN ANTES"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imagen_uno"/>
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto_dos"
+        android:text="IMAGEN AHORA"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"/>
+
+        <ProgressBar
+            android:layout_marginTop="20dp"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_image"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/imagen_dos"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto_finalizado"
+        android:text="Hola"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        />
+
+    <ImageButton
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shared"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_shared"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            android:layout_gravity="center"-->
+<!--            xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--            android:id="@+id/adView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            ads:adSize="BANNER"-->
+<!--            ads:adUnitId="@string/banner">-->
+<!--        </com.google.android.gms.ads.AdView>-->
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

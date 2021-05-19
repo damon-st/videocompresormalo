@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <RadioGroup
+      android:layout_margin="@dimen/dp_10"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/grupo_radio">
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Compresion Baja"
+          android:id="@+id/rd_baja"
+          android:checked="true"
+          />
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Compresion Media"
+          android:id="@+id/rd_media"/>
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Compresion Alta"
+          android:id="@+id/rd_alta"/>
+  </RadioGroup>
+
+    <Button
+        android:id="@+id/coprimir_btn"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn_acent"
+        android:text="COMPRIMIR"/>
+
+</LinearLayout>
