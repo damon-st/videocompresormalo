@@ -9,7 +9,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Looper;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +37,7 @@ import com.damon.videocompress.utils.Util;
 import com.damon.videocompress.activitys.CompressVideoActivity;
 import com.damon.videocompress.activitys.VideoCompartir;
 import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.Player;
@@ -55,6 +58,7 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.concurrent.Executors;
 
 public class AdapterVideoList extends RecyclerView.Adapter<AdapterVideoList.MyViewHolder> {
 
@@ -141,7 +145,9 @@ public class AdapterVideoList extends RecyclerView.Adapter<AdapterVideoList.MyVi
         playbackStateListener = new PlaybackStateListener();
         titulo.setText(title);
 
+
         try{
+
             BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter.Builder(context).build();
             TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
             exoPlayer = (SimpleExoPlayer) ExoPlayerFactory.newSimpleInstance(context);
@@ -162,11 +168,9 @@ public class AdapterVideoList extends RecyclerView.Adapter<AdapterVideoList.MyVi
             exoPlayer.setVideoScalingMode(C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING);
 
         }catch (Exception e){
+//            pararVideo();
             e.printStackTrace();
         }
-
-
-
 
 
         shared.setOnClickListener(new View.OnClickListener() {
@@ -255,9 +259,10 @@ public class AdapterVideoList extends RecyclerView.Adapter<AdapterVideoList.MyVi
     }
     public void pararVideo(){
         if (exoPlayer != null){
-            if (exoPlayer.isPlaying()){
-                exoPlayer.setPlayWhenReady(!exoPlayer.getPlayWhenReady());
-            }
+            exoPlayer.setPlayWhenReady(false);
+            exoPlayer.stop(true);
+            exoPlayer.setVideoSurface(null);
+            exoPlayer.release();
         }
 
     }
